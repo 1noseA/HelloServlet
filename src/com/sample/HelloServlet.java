@@ -29,8 +29,11 @@ public class HelloServlet extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		String name = request.getParameter("name");
+		String password = request.getParameter("password");
+		System.out.println(password);
+
 		PrintWriter out = response.getWriter();
-		out.println("<html><body><h1>hello." + name + "</h1></body></html>");
+		out.println("<html><body><h1>hello" + name + "</h1></body></html>");
 	}
 
 	/**
